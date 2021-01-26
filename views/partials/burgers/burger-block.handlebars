@@ -1,7 +1,7 @@
-<li>
+<li class="{{#if devour}}border border-secondary rounded{{else}}border border-danger rounded{{/if}}">
 	{{burger_name}}
 
-	<button class="change-devour" data-id="{{id}}" data-newdevour="{{devour}}">
+	<button class="btn {{#if devour}}btn-secondary visible{{else}}btn-danger visible{{/if}} change-devour" data-id="{{id}}" data-newdevour="{{devour}}">
 		{{#if devour}}UNDEVOUR!{{else}}DEVOUR IT!{{/if}}
 	</button>
 </li>
