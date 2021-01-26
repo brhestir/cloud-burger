@@ -10,6 +10,8 @@ app.use(express.static("public"));
 // Parse application body
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+// For images
+app.use(express.static('views/images')); 
 
 // Set Handlebars.
 var exphbs = require("express-handlebars");
