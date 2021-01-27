@@ -23,5 +23,9 @@ li {
   margin-bottom: 5px;
 }
 
+#add-burger-div, #left-burger-div, #right-burger-div {
+  opacity: 0.9;
+}
+
 
   

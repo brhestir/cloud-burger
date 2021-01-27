@@ -14,49 +14,71 @@ body {
 <div class="container-fluid" id="body-div">
   
   <div class="row">
+    <div class="col-4">
+    </div>
     
-    <div class="d-flex justify-content-center">
-      <form class="create-form">
+    <div class="col-4">
+      <div class="card m-3" id="add-burger-div">
+        <div class="card-body text-center">
+          <form class="create-form">
+            <div class="form-group">
+              <h3 class="card-title">Add a Burger:</h3>
+              <label for="ca">Burger Name:</label>
+              <input type="text" id="ca" name="burger_name">
+            </div>
 
-          <div class="form-group m-2">
-            <h3>Add a Burger:</h3>
-            <label for="ca">Burger Name:</label>
-            <input type="text" id="ca" name="burger_name">
-          </div>
+            <div class="form-group">
+              <label for="devoury">Order or Eat now?</label><br>
+              <input type="radio" name="devoury" value="1" checked> Order it!<br>
+              <input type="radio" name="devoury" value="0"> Eat NOW!
+            </div>
 
-          <div class="form-group">
-            <label for="devoury">Order or Eat now?</label><br>
-            <input type="radio" name="devoury" value="1" checked> Order it!<br>
-            <input type="radio" name="devoury" value="0"> Eat NOW!
-          </div>
+            <button class="btn btn-primary" type="submit">Add Burger</button>
+          </form>
+        </div>
+        
+      </div>
+      
+    </div>
 
-          <button class="btn btn-primary" type="submit">Add Burger</button>
-        </form>
+    <div class="col-4">
     </div>
   </div>
   
   <div class="row">
     
     <div class="col-6">
-      <h2>Burgers ready to eat!</h2>
-      <ol>
-        {{#each burgers}}
-          {{#if devoury}}
-            {{> burgers/burger-block devour=false}}
-          {{/if}}
-        {{/each}}
-      </ol>
+      <div class="card m-3" id="left-burger-div">
+        <div class="card-body">
+          <h2 class="card-title text-center">Burgers ready to eat!</h2>
+            <ol>
+              {{#each burgers}}
+                {{#if devoury}}
+                  {{> burgers/burger-block devour=false}}
+                {{/if}}
+              {{/each}}
+            </ol>
+        </div>
+        
+      </div>
+      
     </div>
     
     <div class="col-6">
-      <h2>Burgers eaten:</h2>
-        <ol>
-          {{#each burgers}}
-            {{#unless devoury}}
-              {{> burgers/burger-block devour=true}}
-            {{/unless}}
-          {{/each}}
-        </ol>      
+      <div class="card m-3" id="right-burger-div">
+        <div class="card-body">
+          <h2 class="card-title text-center">Burgers eaten:</h2>
+          <ol>
+            {{#each burgers}}
+              {{#unless devoury}}
+                {{> burgers/burger-block devour=true}}
+              {{/unless}}
+            {{/each}}
+          </ol>
+        </div>
+        
+      </div>  
+              
     </div>
 
   </div>
