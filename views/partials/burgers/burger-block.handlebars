@@ -1,6 +1,6 @@
 <li class="d-flex align-items-center justify-content-between {{#if devour}}border border-secondary rounded{{else}}border border-danger rounded{{/if}}">
 	{{burger_name}}
-	<button class="btn m-1 {{#if devour}}btn-secondary visible{{else}}btn-danger visible{{/if}} change-devour" data-id="{{id}}" data-newdevour="{{devour}}">
+	<button class="btn m-1 {{#if devour}}btn-secondary invisible{{else}}btn-danger visible{{/if}} change-devour" data-id="{{id}}" data-newdevour="{{devour}}">
 		{{#if devour}}UNDEVOUR!{{else}}DEVOUR IT!{{/if}}
 	</button>
 </li>

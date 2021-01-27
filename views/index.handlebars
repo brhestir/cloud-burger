@@ -8,7 +8,7 @@ body {
 </style>
 <nav class="navbar navbar-light bg-light" id="nav-div">
   <div class="container-fluid header-container">
-    <span class="navbar-brand mb-0 h1">Nom-Burger</span>
+    <span class="navbar-brand mb-0 h1">cumulo-nom-burg</span>
   </div>
 </nav>
 <div class="container-fluid" id="body-div">
@@ -22,7 +22,7 @@ body {
         <div class="card-body text-center">
           <form class="create-form">
             <div class="form-group">
-              <h3 class="card-title">Add a Burger:</h3>
+              <h4 class="card-title">Add a Burger:</h4>
               <label for="ca">Burger Name:</label>
               <input type="text" id="ca" name="burger_name">
             </div>
@@ -50,7 +50,7 @@ body {
     <div class="col-6">
       <div class="card m-3" id="left-burger-div">
         <div class="card-body">
-          <h2 class="card-title text-center">Burgers ready to eat!</h2>
+          <h4 class="card-title text-center">Burgers ready to eat!</h4>
             <ol>
               {{#each burgers}}
                 {{#if devoury}}
@@ -67,7 +67,7 @@ body {
     <div class="col-6">
       <div class="card m-3" id="right-burger-div">
         <div class="card-body">
-          <h2 class="card-title text-center">Burgers eaten:</h2>
+          <h4 class="card-title text-center">Burgers eaten:</h4>
           <ol>
             {{#each burgers}}
               {{#unless devoury}}
