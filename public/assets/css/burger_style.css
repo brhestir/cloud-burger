@@ -1,3 +1,7 @@
+body, html, .container-fluid {
+  height: 100%;
+}
+
 li {
   padding: 5px;
   margin: 5px;
@@ -19,11 +23,5 @@ li {
   margin-bottom: 5px;
 }
 
-#nav-div {
-  background-image: url("./public/assets/img/pexels-artem-beliaikin-617230.jpg")
-}
 
-#body-div {
-  background-image: url("./public/assets/img/pexels-tioroshi-lazaro-2874979.jpg")
-}
   
